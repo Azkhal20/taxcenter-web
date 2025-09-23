@@ -17,13 +17,13 @@ export default function Footer() {
             yang dilakukan secara mandiri.
           </p>
           <div className="flex space-x-4 mt-4">
-            <Link href="#" className="hover:text-yellow-400 transition-colors">
+            <Link href="https://www.facebook.com/taxcentergunadarmauniversity/" target="_blank" className="hover:text-yellow-400 transition-colors">
               <FontAwesomeIcon icon={faFacebookF} className="w-9 h-9 bg-[#212239] bg-opacity-50 hover:bg-[#626262] text-white hover:text-yellow-300 rounded-full px-2.5 py-3 text center"/>
             </Link>
-            <Link href="#" className="hover:text-yellow-400 transition-colors">
+            <Link href="https://x.com/taxcenterug" target="_blank" className="hover:text-yellow-400 transition-colors">
               <FontAwesomeIcon icon={faTwitter} className="w-9 h-9 bg-[#212239] bg-opacity-50 hover:bg-[#626262] text-white hover:text-yellow-300 rounded-full px-2.5 py-3 text center"/>
             </Link>
-            <Link href="#" className="hover:text-yellow-400 transition-colors">
+            <Link href="https://www.instagram.com/taxcenter.ug/" target="_blank" className="hover:text-yellow-400 transition-colors">
               <FontAwesomeIcon icon={faInstagram} className="w-9 h-9 bg-[#212239] bg-opacity-50 hover:bg-[#626262] text-white hover:text-yellow-300 rounded-full px-2.5 py-3 text center"/>
             </Link>
           </div>

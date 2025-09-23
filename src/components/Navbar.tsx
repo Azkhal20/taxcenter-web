@@ -18,41 +18,40 @@ const menuItems = [
   {
     title: "TENTANG KAMI",
     subItems: [
-      { title: "PROFIL", href: "/" },
-      { title: "VISI DAN MISI", href: "/" },
-      { title: "TIM KAMI", href: "/" },
-      { title: "MITRA KERJASAMA", href: "/" },
+      { title: "PROFIL", href: "/tentang-kami/profil" },
+      { title: "TIM KAMI", href: "/tentang-kami/tim-kami" },
+      { title: "MITRA KERJASAMA", href: "/tentang-kami/mitra-kerjasama" },
     ],
   },
   {
     title: "PROGRAM & LAYANAN",
     subItems: [
-      { title: "RELAWAN PAJAK", href: "/" },
-      { title: "PENGABDIAN MASYARAKAT", href: "/" },
-      { title: "RISET", href: "/" },
-      { title: "TAX CLINIC", href: "/" },
+      { title: "RELAWAN PAJAK", href: "/program-layanan/relawan-pajak" },
+      { title: "PENGABDIAN MASYARAKAT", href: "/program-layanan/pangabdian-masyarakat" },
+      { title: "RISET", href: "/program-layanan/riset" },
+      { title: "TAX CLINIC", href: "/program-layanan/tax-clinic" },
     ],
   },
   {
     title: "KEGIATAN & BERITA",
     subItems: [
-      { title: "AGENDA KEGIATAN", href: "/" },
-      { title: "ARTIKEL PAJAK", href: "/" },
-      { title: "PUBLIKASI", href: "/" },
+      { title: "AGENDA KEGIATAN", href: "/kegiatan-berita/agenda-kegiatan" },
+      { title: "ARTIKEL PAJAK", href: "/kegiatan-berita/artikel-pajak" },
+      { title: "PUBLIKASI", href: "/kegiatan-berita/publikasi" },
     ],
   },
   {
     title: "EDUKASI PAJAK",
     subItems: [
-      { title: "MATERI PAJAK", href: "/" },
-      { title: "BINCANG SORE", href: "/" },
-      { title: "VIDEO PEMBELAJARAN PAJAK", href: "/" },
+      { title: "MATERI PAJAK", href: "/edukasi-pajak/materi-pajak" },
+      { title: "BINCANG SORE", href: "/edukasi-pajak/bincang-sore" },
+      { title: "VIDEO PEMBELAJARAN PAJAK", href: "/edukasi-pajak/video-pembelajaran-pajak" },
     ],
   },
   {
     title: "GALERI",
     subItems: [
-      { title: "FOTO KEGIATAN", href: "/" },
+      { title: "FOTO KEGIATAN", href: "/galeri/foto-kegiatan" },
     ],
   },
 ];
@@ -103,7 +102,7 @@ export default function Navbar() {
       >
         <div className="py-3 w-1/3 lg:w-1/4 bg-[#FFD427] flex items-center justify-end">
           <FontAwesomeIcon icon={faClock} className="w-8 h-8 mr-2"/>
-          <p className="mr-5 font-light text-sm"> <span className="font-medium">Buka:</span> Senin - Jumat 09-00 - 15.00</p>
+          <p className="mr-5 font-light text-xs xl:text-sm"> <span className="font-medium">Buka:</span> Senin - Jumat 09-00 - 15.00</p>
         </div>
         <div className="py-3 w-3/4 bg-[#2A176F]"></div>
       </div>
@@ -112,7 +111,7 @@ export default function Navbar() {
           <Link href="/">
             <Image
               src="/assets/images/navbar-logo.png"
-              alt="Tax Center Gunadarma Logo"
+              alt="Logo tax Center"
               width={156}
               height={48}
               priority
@@ -128,15 +127,17 @@ export default function Navbar() {
               </SheetTrigger>
               <SheetContent side="left" className="w-[300px]">
                 <nav className="flex flex-col gap-3 mt-16">
-                  <SheetTitle className="flex justify-center mb-5">
+                  <SheetTitle className="flex items-center justify-center mb-5">
+                    <Link href="/">
                       <Image
                         src="/assets/images/navbar-logo.png"
-                        alt="Tax Center Gunadarma Logo"
+                        alt="Logo Tax Center"
                         width={156}
                         height={48}
                         priority
                       />
-                    </SheetTitle>
+                    </Link>
+                  </SheetTitle>
                   {menuItems.map((item, index) => (
                     <div key={index}>
                       <button
@@ -176,7 +177,7 @@ export default function Navbar() {
                   onMouseEnter={() => handleMouseEnter(item.title)}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <span className="text-[#2A176F] font-bold text-sm cursor-default">
+                  <span className="text-[#2A176F] font-bold text-sm cursor-default hover:text-[#F1C40F]">
                     {item.title}
                   </span>
                   {activeMenu === item.title && (
@@ -185,7 +186,7 @@ export default function Navbar() {
                         <li key={subIndex}>
                           <Link
                             href={sub.href}
-                            className="block pl-3 py-3 text-sm font-bold text-[#2A176F] border-b-1 hover:text-[#F1C40F] hover:bg-[#8D9297]/10"
+                            className="block pl-3 py-3 text-sm font-bold text-[#2A176F] border-b-1 border-[#D9D9D9] hover:text-[#F1C40F] hover:bg-[#8D9297]/10"
                           >
                             {sub.title}
                           </Link>

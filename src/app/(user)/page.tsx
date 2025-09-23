@@ -26,7 +26,7 @@ const slides = [
   "/assets/images/carousel-bg.png",
   "/assets/images/carousel-bg.png"
 ];
-  // Data divisi sebagai array untuk loop render
+// Data divisi sebagai array untuk loop render
 const divisiData = [
   {
     icon: faUsers,
@@ -197,7 +197,7 @@ function PenghargaanCarousel() {
                   <div className="relative w-full h-[140px] sm:h-[160px] md:h-[200px] rounded-md overflow-hidden border border-gray-200">
                     <Image src={src} alt={alt} fill style={{ objectFit: "cover" }} />
                   </div>
-                  <p className="mt-3 text-left text-sm md:text-base font-normal max-w-[550px]">{description}</p>
+                  <p className="mt-3 text-left text-xs sm:text-sm md:text-base font-normal max-w-[550px]">{description}</p>
                 </div>
               ))}
             </div>
@@ -257,7 +257,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="relative pt-[70px] lg:pt-[120px] xl:pt-[160px] max-w-full overflow-hidden select-none">
+      <div className="relative pt-[70px] lg:pt-[117px] xl:pt-[160px] max-w-full overflow-hidden select-none">
         {/* Slider Container */}
         <div
           className="relative w-full h-[500px] md:h-[600px] lg:h-[660px] xl:h-[580px] overflow-hidden xl:px-16"
@@ -359,7 +359,7 @@ export default function HomePage() {
         <h2 className="font-bold text-center text-2xl lg:text-3xl mb-8">
           Mitra Kerjasama Tax Center Gunadarma
         </h2>
-        <div className="flex flex-wrap justify-center items-center gap-x-20 mb-9 px-2">
+        <div className="flex flex-wrap justify-center items-center gap-x-20 px-2">
           <Image
             src="/assets/images/mitra/djp.png"
             alt="Tax Center Gunadarma Logo"
@@ -494,7 +494,7 @@ export default function HomePage() {
             </div>
             <Button
               size="lg"
-              className="bg-[#2A176F] hover:bg-[#2A176F]/20 hover:text-[#FE8100] text-white font-bold h-11 px-10 rounded-md mt-8 md:mt-11 cursor-pointer"
+              className="bg-[#2A176F] hover:opacity-30 text-white font-bold h-11 px-10 rounded-md mt-8 md:mt-11 cursor-pointer"
               >
               Lihat Selengkapnya
             </Button>
