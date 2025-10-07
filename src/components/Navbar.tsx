@@ -247,9 +247,13 @@ export default function Navbar() {
                         <li key={sub.href} className="group/item">
                           <Link
                             href={sub.href}
-                            className="block pl-3 py-3 text-sm font-bold text-[#2A176F] border-b border-[#D9D9D9] transition-all duration-250 group-hover/item:translate-x-1.5 hover:text-[#F1C40F] hover:bg-[#D9D9D9]/20"
+                            className="block pl-3 py-3 text-sm font-bold text-[#2A176F] border-b border-[#D9D9D9] hover:text-[#F1C40F] hover:bg-[#D9D9D9]/20"
                           >
-                            {sub.title}
+                            <span className="inline-block transition-all duration-250 transform hover:translate-x-1.5 hover:pl-4">
+                              <span className="absolute left-[-10px] opacity-0 hover:opacity-100 hover:before:content-['-'] transition-opacity duration-250">
+                              </span>
+                              {sub.title}
+                            </span>
                           </Link>
                         </li>
                       ))}
