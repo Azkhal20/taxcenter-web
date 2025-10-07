@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAward,
@@ -271,7 +272,7 @@ export default function HomePage() {
             {slides.map((src, index) => (
               <div
                 key={index}
-                className="relative w-full min-w-full h-[520px] md:h-[620px] lg:h-[660px]"
+                className="relative w-full min-w-full h-[520px] md:h-[620px] lg:h-[580px]"
               >
                 <Image
                   src={src}
@@ -312,12 +313,14 @@ export default function HomePage() {
               lingkungan perguruan tinggi dan masyarakat yang dilakukan secara
               mandiri.
             </p>
-            <Button
-              size="lg"
-              className="bg-orange-400 hover:bg-[#e26100] text-white font-bold h-11 px-10 rounded-md mt-6 md:mt-20 cursor-pointer"
-            >
-              Selengkapnya
-            </Button>
+            <Link href="/">
+              <Button
+                size="lg"
+                className="bg-orange-400 hover:bg-[#e26100] text-white font-bold h-11 px-10 rounded-md mt-6 md:mt-20 cursor-pointer"
+              >
+                Selengkapnya
+              </Button>
+            </Link>
           </div>
 
           {/* Prev Button */}
@@ -443,12 +446,14 @@ export default function HomePage() {
               </div>
               <h3 className="font-bold mb-2 text-md md:text-lg">{title}</h3>
               <p className="text-xs md:text-sm mb-4 max-w-[300px]">{description}</p>
-              <Button
-                size="sm"
-                className="bg-[#FE8100] hover:bg-[#e26100] text-white font-semibold rounded-full px-5 h-8 cursor-pointer"
-              >
-                Lihat Detail
-              </Button>
+              <Link href="/">
+                <Button
+                  size="sm"
+                  className="bg-[#FE8100] hover:bg-[#e26100] text-white font-semibold rounded-full px-5 h-8 cursor-pointer"
+                >
+                  Lihat Detail
+                </Button>
+              </Link>
               </div>
             ))}
           </div>
@@ -492,12 +497,14 @@ export default function HomePage() {
                 </article>
               ))}
             </div>
-            <Button
-              size="lg"
-              className="bg-[#2A176F] hover:opacity-30 text-white font-bold h-11 px-10 rounded-md mt-8 md:mt-11 cursor-pointer"
-              >
-              Lihat Selengkapnya
-            </Button>
+            <Link href="/">
+              <Button
+                size="lg"
+                className="bg-[#2A176F] hover:opacity-30 text-white font-bold h-11 px-10 rounded-md mt-8 md:mt-11 cursor-pointer"
+                >
+                Lihat Selengkapnya
+              </Button>
+            </Link>
           </div>
       </section>
 
@@ -513,12 +520,14 @@ export default function HomePage() {
             ever since the 1500s, when an unknown printer took a galley of
             type and scrambled it to make a type specimen book.
           </p>
-          <Button
-            size="lg"
-            className="bg-[#2A176F] hover:opacity-30 text-white font-bold h-11 px-10 rounded-md mt-8 md:mt-12 cursor-pointer"
-          >
-            Website Advance Search
-          </Button>
+          <Link href="/" target="_blank">
+            <Button
+              size="lg"
+              className="bg-[#2A176F] hover:opacity-30 text-white font-bold h-11 px-10 rounded-md mt-8 md:mt-12 cursor-pointer"
+            >
+              Website Advance Search
+            </Button>
+          </Link>
         </div>
       </section>
     </>

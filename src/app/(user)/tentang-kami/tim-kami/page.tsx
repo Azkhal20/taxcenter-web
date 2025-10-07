@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
-import DivisionList from "@/components/DivisionList";
+import DivisionList from "@/components/Accordion/DivisionList";
 
 export const metadata: Metadata = {
   title: "Tim Kami",
