@@ -1,4 +1,3 @@
-// app/(site)/tim-kami/page.tsx
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
@@ -84,7 +83,7 @@ function TeamCard({
           alt=""
           fill
           className="object-fill select-none pointer-events-none"
-          priority={false}
+          loading="lazy"
         />
         <div
           className="absolute top-1/2 -translate-y-1/2 z-10"

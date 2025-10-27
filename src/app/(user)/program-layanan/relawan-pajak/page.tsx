@@ -112,13 +112,13 @@ export default function RelawanPajak() {
 
           {/* Grid gambar */}
           <div className="space-y-5 md:space-y-6">
-            <div className="relative w-full max-w-[560px] md:max-w-none mx-auto rounded-2xl bg-[#D9D9D9] border border-slate-200 aspect-[16/9] md:aspect-[21/9]">
+            <div className="relative w-full max-w-[560px] md:max-w-none mx-auto rounded-2xl bg-[#D9D9D9] border border-slate-200 aspect-[16/9] md:aspect-[21/6]">
               <Image
                 src="/images/kehumasan-hero.jpg"
                 alt="Fungsi Kehumasan 1"
                 fill
                 className="object-cover rounded-2xl"
-                priority={false}
+                priority
                 sizes="(min-width: 768px) 100vw, 100vw"
               />
             </div>
@@ -135,6 +135,7 @@ export default function RelawanPajak() {
                     fill
                     className="object-cover rounded-2xl"
                     sizes="(min-width: 768px) 50vw, 100vw"
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -171,6 +172,7 @@ export default function RelawanPajak() {
                   fill
                   className="object-cover rounded-2xl"
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 33vw, 100vw"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -207,6 +209,7 @@ export default function RelawanPajak() {
                   fill
                   className="object-cover rounded-2xl"
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 33vw, 100vw"
+                  loading="lazy"
                 />
               </div>
             ))}

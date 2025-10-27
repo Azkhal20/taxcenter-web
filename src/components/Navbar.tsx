@@ -152,8 +152,8 @@ export default function Navbar() {
       >
         <div className="py-4 w-1/3 lg:w-1/4 bg-[#FFD427] flex items-center justify-end">
           <FontAwesomeIcon icon={faClock} className="w-8 h-8 mr-2" />
-          <p className="mr-5 font-light text-xs">
-            <span className="font-medium">Buka:</span> Senin - Jumat 09-00 - 15.00
+          <p className="mr-4 font-light text-xs">
+            <span className="font-bold">Buka:</span> Senin - Jumat 09-00 - 15.00
           </p>
         </div>
         <div className="py-4 w-3/4 bg-[#2A176F]" />
@@ -235,7 +235,7 @@ export default function Navbar() {
                   {activeMenu === item.title && (
                     <ul 
                     className={[
-                      "absolute left-0 mt-5.5 w-54 bg-white border-t-3 border-t-yellow-300 shadow-lg",
+                      "absolute -left-10 mt-5.5 w-60 bg-white border-t-3 border-t-yellow-300 shadow-lg",
                       "origin-top will-change-[opacity,transform] transition-all duration-200 ease-out",
                         open
                           ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
@@ -249,7 +249,7 @@ export default function Navbar() {
                             href={sub.href}
                             className="block pl-3 py-3 text-sm font-bold text-[#2A176F] border-b border-[#D9D9D9] hover:text-[#F1C40F] hover:bg-[#D9D9D9]/20"
                           >
-                            <span className="inline-block transition-all duration-250 transform hover:translate-x-1.5 hover:pl-4">
+                            <span className="block transition-all duration-250 transform hover:translate-x-1.5">
                               <span className="absolute left-[-10px] opacity-0 hover:opacity-100 hover:before:content-['-'] transition-opacity duration-250">
                               </span>
                               {sub.title}

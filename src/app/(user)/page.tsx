@@ -27,7 +27,7 @@ const slides = [
   "/assets/images/carousel-bg.png",
   "/assets/images/carousel-bg.png"
 ];
-// Data divisi sebagai array untuk loop render
+
 const divisiData = [
   {
     icon: faUsers,
@@ -196,7 +196,13 @@ function PenghargaanCarousel() {
               {group.map(({ src, alt, description }, i) => (
                 <div key={i} className="flex flex-col items-start w-1/3">
                   <div className="relative w-full h-[140px] sm:h-[160px] md:h-[200px] rounded-md overflow-hidden border border-gray-200">
-                    <Image src={src} alt={alt} fill style={{ objectFit: "cover" }} />
+                    <Image 
+                      src={src} 
+                      alt={alt} 
+                      fill 
+                      style={{ objectFit: "cover" }} 
+                      loading="lazy"
+                    />
                   </div>
                   <p className="mt-3 text-left text-xs sm:text-sm md:text-base font-normal max-w-[550px]">{description}</p>
                 </div>
@@ -368,35 +374,35 @@ export default function HomePage() {
             alt="Tax Center Gunadarma Logo"
             width={60}
             height={96}
-            priority
+            loading="lazy"
           />
           <Image
             src="/assets/images/mitra/pertapsi.png"
             alt="Tax Center Gunadarma Logo"
             width={95}
             height={96}
-            priority
+            loading="lazy"
           />
           <Image
             src="/assets/images/mitra/majalah-pajak.png"
             alt="Tax Center Gunadarma Logo"
             width={200}
             height={96}
-            priority
+            loading="lazy"
           />
           <Image
             src="/assets/images/mitra/hivefive.png"
             alt="Tax Center Gunadarma Logo"
             width={140}
             height={48}
-            priority
+            loading="lazy"
           />
           <Image
             src="/assets/images/mitra/ddtc.png"
             alt="Tax Center Gunadarma Logo"
             width={140}
             height={96}
-            priority
+            loading="lazy"
           />
         </div>
       </section>
@@ -417,7 +423,7 @@ export default function HomePage() {
             <video 
             controls
             className="w-2xl md:w-4xl xl:w-5xl h-60 sm:h-67 md:h-102 lg:h-107 rounded-md border border-gray-300 shadow-sm object-cover"
-            preload="metadata"
+            preload="lazy"
             >
               <source src="" type="video/mp4" />
               Your browser does not support the video tag.

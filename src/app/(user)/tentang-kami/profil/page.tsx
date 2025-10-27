@@ -61,7 +61,7 @@ export default function Profil() {
               width={600}
               height={400}
               className="w-full h-full object-cover rounded-lg"
-              priority
+              loading="lazy"
             />
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function Profil() {
                   width={400}
                   height={350}
                   className="w-full h-auto rounded-lg object-cover"
-                  priority
+                  loading="lazy"
                 />
               </div>
 
@@ -175,7 +175,7 @@ export default function Profil() {
                 width={200}
                 height={200}
                 className="w-full h-auto object-cover rounded-lg"
-                priority
+                loading="lazy"
               />
             </div>
 

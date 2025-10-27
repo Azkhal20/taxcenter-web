@@ -62,6 +62,7 @@ export default function TaxClinic() {
               className="w-auto h-auto"
               width={350}
               height={300}
+              priority
             />
           </div>
         </div>

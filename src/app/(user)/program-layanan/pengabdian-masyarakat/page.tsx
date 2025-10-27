@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   description: "Pengabdian Masyarakat",
 };
 
-/** Card program */
 function ProgramCard({
   icon,
   title,
@@ -62,7 +61,7 @@ function ProgramCard({
 export default function PengabdianMasyarakat() {
   return (
     <>
-      {/* Header Section (judul halaman) */}
+      {/* Header Section */}
       <div className="pt-[70px] lg:pt-[120px] overflow-hidden">
         <section className="w-full bg-[#EFF4F7] py-16 md:py-10 xl:py-18">
           <div className="mx-auto max-w-6xl px-4 md:px-6 py-9 md:py-16 grid md:grid-cols-2 gap-8 md:gap-12 items-center justify-center text-center">
@@ -82,12 +81,12 @@ export default function PengabdianMasyarakat() {
               </p>
             </div>
 
-            {/* Right: Gambar (tinggi mengikuti container) */}
             <div className="relative rounded-2xl bg-[#D9D9D9] h-[240px] md:h-auto md:min-h-[360px]">
-              {/* 
-                    Jika ada aset gambar, Anda bisa ganti div ini dengan <Image fill src="/images/abdimas.jpg" className="object-cover rounded-2xl" alt="Pengabdian Masyarakat" />
-                    Menggunakan div abu-abu agar sesuai mockup ketika belum ada gambar.
-                    */}
+            {/* 
+              Jika ada aset gambar, Anda bisa ganti div ini dengan <Image fill src="/images/abdimas.jpg" className="object-cover rounded-2xl" alt="Pengabdian Masyarakat" />
+              Menggunakan div abu-abu agar sesuai mockup ketika belum ada gambar.
+            */}
+              <div className="absolute inset-0 bg-[#D9D9D9] rounded-2xl"></div>
             </div>
           </div>
         </section>
@@ -99,7 +98,7 @@ export default function PengabdianMasyarakat() {
               Program ABDIMAS
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6 align-center">
               <ProgramCard
                 icon={faHandshake}
                 title={

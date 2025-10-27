@@ -80,6 +80,7 @@ export default function FotoKegiatan() {
                     className="w-auto object-contain bg-[#D9D9D9]"
                     width={150}
                     height={100}
+                    loading="lazy"
                 />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold">{item.title}</h3>

@@ -23,7 +23,6 @@ function MitraCard({
   title,
   description,
   imgWrapperClass = "w-40 h-32 sm:w-44 sm:h-36 md:w-48 md:h-40",
-  priority = false,
 }: MitraCardProps) {
   return (
     <Card className="flex flex-col md:flex-row items-center bg-white rounded-md shadow-md hover:shadow-lg overflow-hidden">
@@ -35,7 +34,7 @@ function MitraCard({
             fill
             className="object-contain"
             sizes="(max-width: 768px) 160px, 224px"
-            priority={priority}
+            loading="lazy"
           />
         </div>
       </div>
@@ -54,7 +53,7 @@ function MitraCard({
 export default function MitraKerjasama() {
   return (
     <div className="relative pt-[70px] lg:pt-[120px] max-w-full overflow-hidden select-none">
-      {/* Header abu-abu */}
+      {/* Header */}
       <div className="relative w-full h-[150px] md:h-[200px] bg-[#D9D9D9] flex items-center justify-center">
         <h1 className="text-3xl md:text-4xl font-bold">MITRA KERJASAMA</h1>
       </div>
@@ -87,7 +86,6 @@ export default function MitraKerjasama() {
           dalam pelaksanaan fungsi Tax Center di Perguruan Tinggi di seluruh Indonesia. PERTAPSI bertujuan untuk membantu 
           Direktorat Jenderal Pajak sebagai mitra kerja dalam melaksanakan tugas mensosialisasikan peraturan perundang-undangan 
           perpajakan bagi masyarakat luas."
-          // contoh: butuh tinggi lebih besar
           imgWrapperClass="w-40 h-32 sm:w-48 sm:h-40 md:w-46 md:h-44 lg:w-52 lg:h-46"
         />
 
@@ -103,7 +101,6 @@ export default function MitraKerjasama() {
           topik tulisan yang sesuai dengan tujuan dan topik dari majalah yang bersangkutan. Majalah Pajak hadir di tengah masyarakat 
           untuk memberikan pengetahuan dan pencerahan mengenai berbagai isu perpajakan, Bisnis, Keuangan, dan Manajemen terutama isu 
           internal domestik."
-          // contoh: logo rasio landscape tipis
           imgWrapperClass="w-56 h-24 sm:w-64 sm:h-28 md:w-46 md:h-32 lg:w-52 lg:h-46"
         />
 
@@ -114,7 +111,6 @@ export default function MitraKerjasama() {
           description="Hive Five Merupakan Konsultasi Bisnis, Perpajakan dan Keuangan Badan Usaha Maupun Perorangan. Hive Five bekerjasama 
           dengan Tax Center Universitas Gunadarma dalam membantu UMKM binaan Tax Center Universitas Gunadarma dalam memperoleh legalitas 
           usahanya melalui seminar dan workshop yang diselenggarakan oleh Tax Center Universitas Gunadarma."
-          // contoh: logo relatif kotak
           imgWrapperClass="w-40 h-40 sm:w-48 sm:h-48 md:w-46 md:h-56 lg:w-52 lg:h-46"
         />
 
@@ -127,7 +123,6 @@ export default function MitraKerjasama() {
           Kerjasama Universitas Gunadarma dengan DDTC dapat dijadikan sebagai bagian dari pengabdian masyarakat Universitas Gunadarma. 
           Kerjasama ini memiliki komitmen menjalankan kerjasama terkait pendidikan, penelitian, pengabdian masyarakat, serta peningkatan 
           kualitas Sumber Daya manusia."
-          // contoh: logo lebar, sedang
           imgWrapperClass="w-52 h-28 sm:w-60 sm:h-32 md:w-46 md:h-36 lg:w-52 lg:h-46"
         />
       </div>

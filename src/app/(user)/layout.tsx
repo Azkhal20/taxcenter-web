@@ -6,14 +6,12 @@ config.autoAddCss = false;
 
 export default function UserLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        <main>
-          {children}
-        </main>
-        <Footer />
-      </body>
-    </html>
+    <div>
+      <Navbar />
+      <main>
+        <div>{children}</div>
+      </main>
+      <Footer />
+    </div>
   );
-}
+};
