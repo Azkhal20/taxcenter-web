@@ -115,7 +115,7 @@ export default function Navbar() {
   // state untuk accordion mobile
   const [mobileOpenIndex, setMobileOpenIndex] = React.useState<number | null>(null);
   React.useEffect(() => {
-    if (!isOpen) setMobileOpenIndex(null); // reset saat sheet ditutup
+    if (!isOpen) setMobileOpenIndex(null);
   }, [isOpen]);
 
   // hide top info-bar saat scroll

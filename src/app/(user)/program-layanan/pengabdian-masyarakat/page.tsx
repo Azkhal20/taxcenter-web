@@ -7,6 +7,7 @@ import {
   faBookOpen,
   faCamera,
   faChevronRight,
+  IconDefinition,
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
 
@@ -21,7 +22,7 @@ function ProgramCard({
   description,
   href,
 }: {
-  icon: any;
+  icon: IconDefinition;
   title: React.ReactNode;
   description: string;
   href: string;
