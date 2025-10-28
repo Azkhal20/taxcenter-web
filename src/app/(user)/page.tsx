@@ -425,7 +425,7 @@ export default function HomePage() {
             className="w-2xl md:w-4xl xl:w-5xl h-60 sm:h-67 md:h-102 lg:h-107 rounded-md border border-gray-300 shadow-sm object-cover"
             preload="lazy"
             >
-              <source src="" type="video/mp4" />
+              <source src="#" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

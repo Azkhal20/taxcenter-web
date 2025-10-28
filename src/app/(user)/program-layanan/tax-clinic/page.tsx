@@ -3,6 +3,11 @@ import { Metadata } from "next";
 import Image from "next/image";
 import AccordionComponent from "@/components/Accordion/Layanan";
 
+export const metadata: Metadata = {
+  title: "Tax Clinic",
+  description: "Tax Clinic",
+};
+
 const items = [
   {
     title: "Coretax",
@@ -26,10 +31,6 @@ const items = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Tax Clinic",
-  description: "Tax Clinic",
-};
 
 export default function TaxClinic() {
   return (

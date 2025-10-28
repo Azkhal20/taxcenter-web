@@ -143,7 +143,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full flex flex-col z-50 will-change-transform transition-transform duration-300 ease-out">
-      {/* info bar */}
+      {/* Info Bar */}
       <div
         className={`w-full text-white hidden lg:flex transition-all duration-100 ease-in-out overflow-hidden ${
           scrolled ? "max-h-0 opacity-0" : "max-h-16 opacity-100"
@@ -166,7 +166,7 @@ export default function Navbar() {
         style={{ zIndex: 40 }}
       />
 
-      {/* main bar */}
+      {/* Main Bar */}
       <div className="flex justify-center w-full bg-white shadow z-50">
         <div className="container flex items-center justify-between py-3 px-2 lg:px-9">
           <Link href="/">
@@ -215,7 +215,7 @@ export default function Navbar() {
                 return (
                 <li
                   key={index}
-                  ref={(el) => (menuRefs.current[index] = el)}
+                  ref={(el) => { menuRefs.current[index] = el }}
                   className="relative group"
                   onMouseEnter={() => handleMouseEnter(item.title)}
                   onMouseLeave={handleMouseLeave}

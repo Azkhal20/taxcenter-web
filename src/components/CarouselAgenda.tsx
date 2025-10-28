@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import Image from "next/image";
 
 interface CarouselProps {
@@ -10,14 +10,14 @@ interface CarouselProps {
 const CarouselAgenda: React.FC<CarouselProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(1);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  }, [images.length]);
 
   useEffect(() => {
     const interval = setInterval(goToNext, 8000); 
     return () => clearInterval(interval);
-  }, []);
+  }, [goToNext]);
 
   const handleManualChange = (index: number) => {
     setCurrentIndex(index);
@@ -25,7 +25,7 @@ const CarouselAgenda: React.FC<CarouselProps> = ({ images }) => {
 
   return (
     <div className="relative">
-      <div className="">
+      <div>
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
