@@ -14,14 +14,14 @@ type TeamCardProps = {
   name: string;
   role: string;
   photo: string;
-  bgCapsule: string;   // PNG kapsul+sabit (transparan)
+  bgCapsule: string;
   size?: SizeKey;
   overrides?: Partial<{
-    width: number;         // lebar kapsul px (konstan)
-    height: number;        // tinggi kapsul px
-    avatar: number;        // diameter avatar px
-    avatarLeftPct: number; // posisi tengah avatar dari kiri (%)
-    textLeftPct: number;   // posisi awal teks dari kiri (%)
+    width: number;
+    height: number;
+    avatar: number;
+    avatarLeftPct: number;
+    textLeftPct: number;
   }>;
 };
 
@@ -77,10 +77,9 @@ function TeamCard({
   return (
     <div className="flex items-center justify-center w-full">
       <div className="relative" style={{ ...widthStyle, height: cfg.height }}>
-        {/* Kapsul PNG tidak overflow */}
         <Image
           src={bgCapsule}
-          alt=""
+          alt="Tim Kami"
           fill
           className="object-fill select-none pointer-events-none"
           loading="lazy"
@@ -131,7 +130,6 @@ export default function TimKami() {
 
       <section>
         <div className="mx-auto max-w-7xl px-4 sm:px-8 py-12 md:py-16 space-y-12">
-          {/* Gambar Atas*/}
           <div className="grid place-items-center">
             <TeamCard
               name="Prof. Dr. E. S. Margianti, SE., MM."
@@ -145,7 +143,6 @@ export default function TimKami() {
 
           <hr className="border-t-2 border-[#D9D9D9] mx-auto" style={HR_STYLE} />
 
-          {/* Gambar Tengah */}
           <div className="grid place-items-center">
             <TeamCard
               name="Dr. Beny Susanti, SE., MM."
@@ -159,7 +156,6 @@ export default function TimKami() {
 
           <hr className="border-t-2 border-[#D9D9D9] mx-auto" style={HR_STYLE} />
 
-          {/* Gambar Bawah */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-12 lg:gap-16 justify-items-center">
             <TeamCard
               name="Dr. Feni Andriani, S.Si, M.Si."

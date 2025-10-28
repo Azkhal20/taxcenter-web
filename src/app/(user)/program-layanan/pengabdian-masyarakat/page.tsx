@@ -141,7 +141,7 @@ export default function PengabdianMasyarakat() {
 
         <section className="bg-[#F5FAFF] w-full py-12">
           <div className="flex flex-col justify-center items-center text-center">
-            <h2 className="font-bold text-text-3xl md:text-4xl mb-7">
+            <h2 className="font-bold text-3xl md:text-4xl mb-7">
               Potensi Abdimas
             </h2>
             <p className="text-sm md:text-base max-w-5xl mx-5">

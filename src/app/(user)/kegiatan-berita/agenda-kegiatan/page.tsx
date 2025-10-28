@@ -76,16 +76,14 @@ export default function AgendaKegiatan() {
       </section>
 
       {/* Kegiatan dan Berita Terbaru Section */}
-      <div className="pt-4 pb-6 px-4 md:px-16 xl:px-32">
+      <div className="pt-4 pb-12 px-4 md:px-16 xl:px-32">
         <div className="container mx-auto">
-        {/* Title Section */}
         <h2 className="text-2xl md:text-3xl font-bold">Kegiatan dan Berita Terbaru</h2>
           <div className="flex justify-end mt-2">
             <Link href="/">
               <p className="text-[#F1C40F] text-lg font-semibold">Liat Semua</p>
             </Link>
           </div>
-          {/* Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
             {dummyData.map((item, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
